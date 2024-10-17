@@ -1,6 +1,4 @@
 const Works = () => {
-  return (
-    <div>Works</div>
-  )
-}
-export default Works
+  return <div id="Works">Works</div>;
+};
+export default Works;
