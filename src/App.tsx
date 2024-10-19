@@ -5,13 +5,15 @@ import Works from "./components/Works";
 const App = () => {
   return (
     <div className="bg-black text-white">
-      <section>
-        <Navbar />
-        <Hero />
-      </section>
-      <section>
-        <Works />
-      </section>
+      <div>
+        <section>
+          <Navbar />
+          <Hero />
+        </section>
+        <section>
+          <Works />
+        </section>
+      </div>
     </div>
   );
 };

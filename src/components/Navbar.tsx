@@ -1,36 +1,49 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const items = ["Home", "Services", "Portfolio", "Contact"];
-  const variants = {
+  const items = ["Home", "Services", "Works", "Portfolio", "Contact"];
+
+  const sidebarVariants = {
     open: {
+      clipPath: "circle(1200px at 50px 50px)",
       transition: {
-        staggerChildren: 0.1,
+        type: "spring",
+        stiffness: 20,
       },
     },
-
     closed: {
+      clipPath: "circle(30px at 50px 50px)",
       transition: {
-        staggerChildren: 0.05,
-        staggerDirection: -1,
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
       },
     },
   };
 
   const itemVariants = {
     open: {
-      y: 0,
       opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        delay: 0.1,
+      },
     },
-
     closed: {
-      y: 50,
       opacity: 0,
+      y: 50,
+      transition: {
+        duration: 0.3,
+      },
     },
   };
+
   return (
     <div>
       <motion.div
@@ -59,7 +72,7 @@ const Navbar = () => {
         {/* mobile toggleButton */}
         <motion.button
           className="md:hidden"
-          onClick={() => setOpen((prev: any) => !prev)}
+          onClick={() => setOpen((prev) => !prev)}
           whileHover={{ scale: 1.5 }}
         >
           <motion.div
@@ -73,20 +86,31 @@ const Navbar = () => {
           </motion.div>
         </motion.button>
 
-        {/* sidebar menu */}
-        <motion.div className="hidden" variants={variants}>
-          {items.map((item) => (
-            <motion.a
-              href={`#${item}`}
-              key={item}
-              variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+        {/* animated sidebar with circle effect */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              className="fixed top-0 left-0 h-screen w-[80vw] bg-white z-50 text-black space-y-10 flex flex-col md:hidden justify-center items-center"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={sidebarVariants}
             >
-              {item}
-            </motion.a>
-          ))}
-        </motion.div>
+              {items.map((item) => (
+                <motion.a
+                  href={`${item == "Home" ? "/" : `#${item}`}`}
+                  key={item}
+                  className="text-xl cursor-pointer"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.5, color: "lightblue" }}
+                  whileTap={{ scale: 0.95, color: "lightblue" }}
+                >
+                  {item}
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* desktop menu */}
         <motion.div className="md:flex space-x-10 text-lg hidden">
@@ -116,4 +140,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;
