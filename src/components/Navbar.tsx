@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <nav className="navbar">
       <motion.div
         className="px-10 h-[80px] w-full flex justify-between items-center"
         initial={{
@@ -56,22 +56,22 @@ const Navbar = () => {
           opacity: 1,
           y: 0,
         }}
-        transition={{ ease: "easeIn", duration: 1.5 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 0.3 }}
       >
         <motion.a
           href="/"
           whileHover={{
             scale: 1.2,
-            color: "lightblue",
+            color: " #bfdbfe",
             rotate: 180,
           }}
-          className="text-2xl"
+          className="text-2xl 2xl:text-4xl font-bold"
         >
           Nugar.dev
         </motion.a>
         {/* mobile toggleButton */}
         <motion.button
-          className="md:hidden"
+          className="md:hidden z-50"
           onClick={() => setOpen((prev) => !prev)}
           whileHover={{ scale: 1.5 }}
         >
@@ -86,24 +86,40 @@ const Navbar = () => {
           </motion.div>
         </motion.button>
 
-        {/* animated sidebar with circle effect */}
         <AnimatePresence>
           {open && (
             <motion.div
-              className="fixed top-0 left-0 h-screen w-[80vw] bg-white z-50 text-black space-y-10 flex flex-col md:hidden justify-center items-center"
+              className="fixed top-0 left-0 h-screen w-screen bg-white z-50 text-black space-y-10 flex flex-col md:hidden justify-center items-center"
               initial="closed"
               animate="open"
               exit="closed"
               variants={sidebarVariants}
             >
+              <motion.button
+                className="md:hidden z-60 absolute top-10 right-10"
+                onClick={() => setOpen((prev) => !prev)}
+                whileHover={{ scale: 1.5 }}
+              >
+                <motion.div
+                  key={open ? "closeIcon" : "menuIcon"}
+                  initial={{ opacity: 0, rotate: 90 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: -90 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {open ? <CloseIcon /> : <MenuIcon />}
+                </motion.div>
+              </motion.button>
+
               {items.map((item) => (
                 <motion.a
                   href={`${item == "Home" ? "/" : `#${item}`}`}
+                  onClick={() => setOpen(false)}
                   key={item}
-                  className="text-xl cursor-pointer"
+                  className="text-xl cursor-pointer font-bold"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.5, color: "lightblue" }}
-                  whileTap={{ scale: 0.95, color: "lightblue" }}
+                  whileHover={{ scale: 1.5, color: " #bfdbfe" }}
+                  whileTap={{ scale: 0.95, color: " #bfdbfe" }}
                 >
                   {item}
                 </motion.a>
@@ -113,31 +129,31 @@ const Navbar = () => {
         </AnimatePresence>
 
         {/* desktop menu */}
-        <motion.div className="md:flex space-x-10 text-lg hidden">
-          <motion.a href="/" whileHover={{ scale: 1.2, color: "lightblue" }}>
+        <motion.div className="md:flex space-x-10 text-lg 2xl:text-2xl hidden">
+          <motion.a href="/" whileHover={{ scale: 1.2, color: " #bfdbfe" }}>
             Home
           </motion.a>
           <motion.a
             href="#Services"
-            whileHover={{ scale: 1.2, color: "lightblue" }}
+            whileHover={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Services
           </motion.a>
           <motion.a
             href="#Works"
-            whileHover={{ scale: 1.2, color: "lightblue" }}
+            whileHover={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Works
           </motion.a>
           <motion.a
             href="#Contact"
-            whileHover={{ scale: 1.2, color: "lightblue" }}
+            whileHover={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Contact
           </motion.a>
         </motion.div>
       </motion.div>
-    </div>
+    </nav>
   );
 };
 

@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 import Works from "./components/Works";
 const App = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black overflow-hidden h-screen w-screen text-white">
       <div>
+        <Navbar />
         <section>
-          <Navbar />
           <Hero />
         </section>
         <section>
