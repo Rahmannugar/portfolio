@@ -5,8 +5,14 @@ import Typewriter from "typewriter-effect";
 import Nugar from "../images/nugar-dev.jpg";
 
 const Hero = () => {
+  const spring = {
+    type: "spring",
+    stiffness: 300,
+    damping: 15,
+  };
+
   return (
-    <div className="h-[100vh] md:flex mt-20 md:mt-[-150px] lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 py-10 space-y-20 md:space-y-0">
+    <div className="h-screen md:flex mt-20 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 py-10 space-y-20 md:space-y-0">
       <div className="space-y-7">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -84,16 +90,26 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <motion.div
+        whileHover={{
+          scale: 0.8,
+          transition: spring,
+        }}
+        className="flex justify-center items-center"
+      >
         <motion.img
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          whileHover={{}}
-          transition={{ duration: 1.2, ease: "easeIn", delay: 1.2 }}
+          transition={{
+            ...spring,
+            duration: 1.2,
+            ease: "easeIn",
+            delay: 1.2,
+          }}
           src={Nugar}
           className="rounded-full h-[300px] w-[300px] 2xl:h-[400px] 2xl:w-[400px] border-4 border-[#bfdbfe] cursor-pointer object-cover"
         ></motion.img>
-      </div>
+      </motion.div>
     </div>
   );
 };

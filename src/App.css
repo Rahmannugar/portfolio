@@ -13,8 +13,12 @@ html {
 }
 
 section {
+    height: 100vh;
+    scroll-snap-align: start;
     padding-top: 80px;
 }
+
+
 
 .navbar {
     position: fixed;
