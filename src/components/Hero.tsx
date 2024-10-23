@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen md:flex mt-20 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 py-10 space-y-20 md:space-y-0">
+    <div className="lg:h-screen md:flex mt-16 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 space-y-20 md:space-y-0">
       <div className="space-y-7">
         <motion.div
           initial={{ x: -100, opacity: 0 }}

@@ -6,15 +6,18 @@ import Works from "./components/Works";
 const App = () => {
   return (
     <div className="bg-black overflow-hidden w-screen text-white">
+      <Navbar />
       <div>
-        <Navbar />
         <section>
           <Hero />
         </section>
-        <section>
+        <section id="Services">
           <Services />
         </section>
-        <section>
+        <section id="Works">
+          <Works />
+        </section>
+        <section id="Contact">
           <Works />
         </section>
       </div>
