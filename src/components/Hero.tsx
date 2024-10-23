@@ -2,7 +2,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import Nugar from "../images/nugar-dev.jpg";
 
 const Hero = () => {
   const spring = {
@@ -41,7 +40,7 @@ const Hero = () => {
             transition={{ duration: 1.2, ease: "easeIn", delay: 0.6 }}
             className="text-justify lg:text-xl w-full md:max-w-[45vw] lg:max-w-[700px] hover:text-[#bfdbfe] cursor-pointer"
           >
-            Dynamic web development specialist with three years of hands-on
+            Computer Science graduate and a dynamic web development specialist with three years of hands-on
             experience in crafting scalable solutions. Proﬁcient in front-end
             and back-end technologies. Collaborative and innovative problem
             solver.
@@ -106,7 +105,7 @@ const Hero = () => {
             ease: "easeIn",
             delay: 1.2,
           }}
-          src={Nugar}
+          src="https://res.cloudinary.com/thirtythree/image/upload/v1729702513/nugar-dev_mgid4s.jpg"
           className="rounded-full h-[300px] w-[300px] 2xl:h-[400px] 2xl:w-[400px] border-4 border-[#bfdbfe] cursor-pointer object-cover"
         ></motion.img>
       </motion.div>
