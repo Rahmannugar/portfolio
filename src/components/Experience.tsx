@@ -9,11 +9,10 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeIn" }}
           whileHover={{
-            scale: 0.8,
             backgroundColor: "white",
             color: "black",
           }}
-          className="text-3xl cursor-pointer 2xl:text-5xl text-blue-200 font-bold"
+          className="text-3xl cursor-pointer 2xl:text-5xl hover:px-3 text-blue-200 font-bold"
         >
           MY SERVICES
         </motion.h1>
@@ -38,9 +37,6 @@ const Experience = () => {
           href="#Contact"
         >
           <motion.button
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeIn" }}
             whileHover={{
               scale: 0.8,
               backgroundColor: "white",
