@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { Alert, CircularProgress, Snackbar } from "@mui/material";
+import Faq from "../components/Faq";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -99,18 +100,19 @@ const Contact = () => {
         How can I help you?
       </motion.h1>
 
-      <form onSubmit={sendMessage}>
-        <motion.div
-          className="space-y-5 bg-gray-700 rounded-xl p-5 font-bold"
+      <div className="md:flex justify-between items-center 2xl:justify-center">
+        <motion.form
+          className="space-y-5 md:w-1/2 bg-gray-700 rounded-xl p-5 font-bold"
           initial={{
             x: "-100%",
             opacity: 0,
           }}
-          animate={{
+          whileInView={{
             x: 0,
             opacity: 1,
           }}
-          transition={{ duration: 1.2, ease: "easeIn" }}
+          transition={{ duration: 0.8, ease: "easeIn" }}
+          onSubmit={sendMessage}
         >
           <input
             required
@@ -150,8 +152,12 @@ const Contact = () => {
               "SEND MESSAGE"
             )}
           </motion.button>
-        </motion.div>
-      </form>
+        </motion.form>
+
+        <div className="md:w-1/2">
+          <Faq />
+        </div>
+      </div>
 
       {/* Alert logic */}
       {responseMessage && (
