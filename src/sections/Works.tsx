@@ -23,7 +23,7 @@ const Works = () => {
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="max-w-[767px] rounded-md px-5 h-[450px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
+          className="max-w-[767px] rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
             <h1 className="text-xl font-bold text-blue-200">
@@ -55,7 +55,7 @@ const Works = () => {
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="max-w-[767px] cursor-pointer rounded-md px-5 h-[450px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
+          className="max-w-[767px] cursor-pointer rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
             <h1 className="text-xl font-bold text-blue-200">
@@ -88,7 +88,7 @@ const Works = () => {
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="max-w-[767px] rounded-md px-5 h-[450px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
+          className="max-w-[767px] rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
             <h1 className="text-xl font-bold text-blue-200">
