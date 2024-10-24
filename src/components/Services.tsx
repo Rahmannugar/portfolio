@@ -85,8 +85,6 @@ const Services = () => {
         </h2>
         <motion.div
           className="absolute w-[90%] h-full"
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         >
