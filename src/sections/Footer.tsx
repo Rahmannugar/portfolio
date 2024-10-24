@@ -38,10 +38,10 @@ const Footer = () => {
               <div>
                 <FooterTitle title="Follow us" className="text-white" />
                 <FooterLinkGroup col>
-                  <FooterLink href="#" className="text-white">
+                  <FooterLink href="#" target="_blank" className="text-white">
                     <a href="https://www.github.com/Rahmannugar">Github</a>
                   </FooterLink>
-                  <FooterLink href="#" className="text-white">
+                  <FooterLink href="#" target="_blank" className="text-white">
                     <a href="ttps://www.linkedin.com/in/Rahmannugar">
                       LinkedIn
                     </a>
