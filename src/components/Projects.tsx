@@ -1,6 +1,74 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Projects = () => {
+  // Separate hover states for each project
+  const [hoveredProject, setHoveredProject] = useState<null | Number>(null);
+
+  const projects = [
+    {
+      title: "BEZAL",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692909/bezal_rarwzh.png",
+      techStack: [
+        "React.js",
+        "Firebase",
+        "Tailwind CSS",
+        "MongoDB",
+        "Express.js",
+        "Node.js",
+      ],
+      description:
+        "A web forum for digital creators to share their work, collaborate with other creators, and monetize their posts",
+      link: "https://bezal.netlify.app/",
+    },
+    {
+      title: "SUPER RARE",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692909/super-rare_gjgga0.png",
+      techStack: ["React.js", "Tailwind CSS"],
+      description:
+        "A landing page for an NFT project designed to showcase digital artwork from rare and emerging artists.",
+      link: "https://superrare.netlify.app/",
+    },
+    {
+      title: "BLOOM DIGITAL MEDIA",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692913/bloom-media_cvf2ss.png",
+      techStack: ["React.js", "CSS3"],
+      description:
+        "A digital marketing platform focused on helping businesses grow their online presence through targeted advertising, content marketing, and data-driven strategies.",
+      link: "https://bloomdigitmedia.com/",
+    },
+    {
+      title: "DOSHPAY",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692922/doshpay_btd3oe.png",
+      techStack: ["React.js", "Tailwind CSS"],
+      description:
+        "A secure and user-friendly payment platform designed to simplify financial transactions for both consumers and businesses.",
+      link: "https://doshpay.netlify.app/",
+    },
+    {
+      title: "CRYPTRACKER",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692983/cryptracker_xap36k.png",
+      techStack: ["React.js", "TailwindCSS", "Firebase", "Coingecko API"],
+      description:
+        "A dynamic cryptocurrency tracking platform that provides users with live updates on market prices.",
+      link: "https://cryptrackersite.netlify.app/",
+    },
+    {
+      title: "SERAPH FESTIVAL",
+      img: "https://res.cloudinary.com/thirtythree/image/upload/v1729692927/seraph-festival_hvtc2s.png",
+      techStack: [
+        "React.js",
+        "Tailwind CSS",
+        "MongoDB",
+        "Express.js",
+        "Node.js",
+      ],
+      description:
+        "A platform catering to the Christian community, facilitating seamless registration for upcoming festivals.",
+      link: "https://seraphfestival.netlify.app/",
+    },
+  ];
+
   return (
     <div className="mt-28">
       <motion.h1
@@ -17,363 +85,78 @@ const Projects = () => {
       </motion.h1>
 
       <div className="mt-16 grid gap-10 sm:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {/* bezal */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[550px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            BEZAL
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692909/bezal_rarwzh.png)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex flex-col space-y-2">
-            <div className="flex space-x-3 text-xs">
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                React.js
-              </h1>
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                Firebase
-              </h1>
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                Tailwind CSS
-              </h1>
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeIn" }}
+            onMouseEnter={() => setHoveredProject(index)}
+            onMouseLeave={() => setHoveredProject(null)}
+            className="relative overflow-hidden max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-full flex flex-col justify-between space-y-3"
+          >
+            {/* Glass-like hover effect */}
+            <motion.div
+              className="absolute inset-0 bg-white/20 backdrop-blur-sm z-10 pointer-events-none"
+              initial={{ opacity: 0, y: "100%" }}
+              animate={
+                hoveredProject === index
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: "100%" }
+              }
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            />
+            <div className="flex-grow z-20">
+              <motion.h1 className="text-blue-200 text-xl font-bold">
+                {project.title}
+              </motion.h1>
+              <div
+                style={{
+                  backgroundImage: `url(${project.img})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="w-full h-[200px] cursor-pointer mx-auto"
+              ></div>
+              <div className="gap-3 grid grid-cols-3 text-xs mb-5">
+                {project.techStack.map((tech, i) => (
+                  <motion.h1
+                    key={i}
+                    whileHover={{ backgroundColor: "white", color: " black" }}
+                    className="bg-black px-3 py-2 cursor-pointer rounded-md text-center font-bold"
+                  >
+                    {tech}
+                  </motion.h1>
+                ))}
+              </div>
+              <p className="text-justify">{project.description}</p>
             </div>
-            <div className="flex space-x-3 text-xs">
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                MongoDB
-              </h1>
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                Express.js
-              </h1>
-              <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-                Node.js
-              </h1>
-            </div>
-          </div>
-          <p className="text-justify">
-            A web forum for digital creators to share their work, collaborate
-            with other creators, and monetize their posts.
-          </p>
 
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://bezal.netlify.app/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
+            <motion.a
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeIn" }}
+              target="_blank"
+              href={project.link}
+              className="z-20 h-fit w-fit"
             >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
-
-        {/* super-rare */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[500px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            SUPER RARE
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692909/super-rare_gjgga0.png)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex items-center space-x-3 text-xs">
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              React.js
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Tailwind CSS
-            </h1>
-          </div>
-          <p className="text-justify">A landing page for an NFT project.</p>
-
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://superrare.netlify.app/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
-            >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
-
-        {/* bloom-digital-media */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[500px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            BLOOM DIGITAL MEDIA
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692913/bloom-media_cvf2ss.png)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex items-center space-x-3 text-xs">
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              React.js
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              CSS3
-            </h1>
-          </div>
-          <p className="text-justify">A digital marketing platform.</p>
-
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://bloomdigitmedia.com/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
-            >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
-
-        {/* doshpay */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[500px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            DOSHPAY
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692922/doshpay_btd3oe.pngs)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex items-center space-x-3 text-xs">
-            <motion.h1
-              whileHover={{
-                color: "black",
-                backgroundColor: "white",
-              }}
-              className="bg-black px-3 py-2 cursor-pointer rounded-md"
-            >
-              React.js
-            </motion.h1>
-            <motion.h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Tailwind CSS
-            </motion.h1>
-          </div>
-          <p className="text-justify">
-            A web forum for digital creators to share their work, collaborate
-            with other creators, and monetize their posts.
-          </p>
-
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://doshpay.netlify.app/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
-            >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
-
-        {/* cryptracker */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[500px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            CRYPTRACKER
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692922/doshpay_btd3oe.pngs)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex flex-wrap items-center space-x-3 space-y-2 text-xs">
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              React.js
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              TailwindCSS
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Firebase
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Coingecko API
-            </h1>
-          </div>
-          <p className="text-justify">
-            A dynamic cryptocurrency tracking platform that provides users with
-            live updates on market prices.
-          </p>
-
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://cryptrackersite.netlify.app/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
-            >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
-
-        {/* seraph-festival */}
-        {/* cryptracker */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
-          whileHover={{}}
-          className="max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-[500px] flex flex-col space-y-3"
-        >
-          <motion.h1 className="text-blue-200 text-xl font-bold">
-            SERAPH FESTIVAL
-          </motion.h1>
-          <div
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/thirtythree/image/upload/v1729692927/seraph-festival_hvtc2s.png)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-            className="w-full h-[200px] mx-auto"
-          ></div>
-          <div className="flex flex-wrap items-center space-x-3 text-xs">
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              React.js
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Tailwind CSS
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              MongoDB
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Express.js
-            </h1>
-            <h1 className="bg-black px-3 py-2 cursor-pointer rounded-md">
-              Node.js
-            </h1>
-          </div>
-          <p className="text-justify">
-            A platform catering to the Christian community, facilitating
-            seamless registration for upcoming festivals.
-          </p>
-
-          <motion.a
-            initial={{ scale: 0.5, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
-            target="_blank"
-            href="https://seraphfestival.netlify.app/"
-          >
-            <motion.button
-              whileHover={{
-                scale: 0.8,
-                backgroundColor: "white",
-                color: "black",
-              }}
-              className="bg-black px-5 py-2 font-bold rounded-md mt-5"
-            >
-              View
-            </motion.button>
-          </motion.a>
-        </motion.div>
+              <motion.button
+                whileHover={{
+                  scale: 0.8,
+                  backgroundColor: "white",
+                  color: "black",
+                }}
+                className="bg-black px-5 py-2 font-bold rounded-md mt-5"
+              >
+                View
+              </motion.button>
+            </motion.a>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default Projects;

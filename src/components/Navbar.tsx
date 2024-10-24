@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const items = ["Home", "Services", "Works", "Portfolio", "Contact"];
+  const items = ["Home", "Services", "Works", "Contact"];
 
   const sidebarVariants = {
     open: {

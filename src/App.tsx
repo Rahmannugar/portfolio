@@ -18,6 +18,7 @@ const App = () => {
         <section id="Works">
           <Works />
         </section>
+        <div className="my-16 bg-gray-400 h-[1px] mx-10" />
         <section id="Contact">
           <Contact />
         </section>

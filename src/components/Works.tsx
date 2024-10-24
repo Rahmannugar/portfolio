@@ -3,7 +3,7 @@ import Projects from "./Projects";
 
 const Works = () => {
   return (
-    <div className="px-5 md:px-10 mt-10">
+    <div className="px-10 mt-10">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
