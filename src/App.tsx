@@ -61,7 +61,7 @@ const App = () => {
               <Contact />
             </section>
           </div>
-          <footer className="flex flex-col font-bold space-y-3 justify-center items-center my-10">
+          <footer className="flex flex-col font-bold justify-center items-center my-7">
             <Footer />
             <button
               onClick={scrollToTop}
