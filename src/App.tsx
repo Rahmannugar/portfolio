@@ -1,6 +1,6 @@
 import "./App.css";
 import GridLoader from "react-spinners/GridLoader";
-import { useEffect, useState, lazy } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
 import Footer from "./sections/Footer";
 
 const Contact = lazy(() => import("./sections/Contact"));
@@ -20,15 +20,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    const handlePageLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-    };
-
-    window.addEventListener("load", handlePageLoad);
-
-    return () => window.removeEventListener("load", handlePageLoad);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
@@ -38,7 +32,13 @@ const App = () => {
           <GridLoader color={`white`} />
         </div>
       ) : (
-        <div>
+        <Suspense
+          fallback={
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-80 z-50">
+              <GridLoader color={`white`} />
+            </div>
+          }
+        >
           <Navbar />
           <div>
             <section>
@@ -64,7 +64,7 @@ const App = () => {
               Back to top
             </button>
           </footer>
-        </div>
+        </Suspense>
       )}
     </div>
   );
