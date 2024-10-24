@@ -1,6 +1,7 @@
 import "./App.css";
 import GridLoader from "react-spinners/GridLoader";
 import { useEffect, useState, Suspense, lazy } from "react";
+import Footer from "./sections/Footer";
 
 const Contact = lazy(() => import("./sections/Contact"));
 const Hero = lazy(() => import("./sections/Hero"));
@@ -10,8 +11,6 @@ const Navbar = lazy(() => import("./components/Navbar"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const date = new Date();
-  const currentYear = date.getFullYear();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -63,13 +62,13 @@ const App = () => {
             </section>
           </div>
           <footer className="flex flex-col font-bold space-y-3 justify-center items-center my-10">
+            <Footer />
             <button
               onClick={scrollToTop}
               className="py-2 px-3 bg-white text-black rounded"
             >
               Back to top
             </button>
-            <h1>&copy; {currentYear} Nugar.dev. All rights reserved.</h1>
           </footer>
         </Suspense>
       )}
