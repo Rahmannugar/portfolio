@@ -31,7 +31,7 @@ const Footer = () => {
                     Works
                   </FooterLink>
                   <FooterLink href="#Contact" className="text-white">
-                    COntact
+                    Contact
                   </FooterLink>
                 </FooterLinkGroup>
               </div>
@@ -49,7 +49,7 @@ const Footer = () => {
                 </FooterLinkGroup>
               </div>
               <div>
-                <FooterTitle title="Legal" className="text-white" />
+                <FooterTitle title="File" className="text-white" />
                 <FooterLinkGroup col>
                   <FooterLink
                     href="/files/student-handbook.pdf"
