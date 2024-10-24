@@ -23,7 +23,7 @@ const App = () => {
     const handlePageLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 2000);
     };
 
     window.addEventListener("load", handlePageLoad);
