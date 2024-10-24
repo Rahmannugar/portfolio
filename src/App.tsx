@@ -1,16 +1,18 @@
 import "./App.css";
-import Contact from "./sections/Contact";
-import Hero from "./sections/Hero";
-import Navbar from "./components/Navbar";
-import Services from "./sections/Services";
-import Works from "./sections/Works";
 import GridLoader from "react-spinners/GridLoader";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
+
+const Contact = lazy(() => import("./sections/Contact"));
+const Hero = lazy(() => import("./sections/Hero"));
+const Services = lazy(() => import("./sections/Services"));
+const Works = lazy(() => import("./sections/Works"));
+const Navbar = lazy(() => import("./components/Navbar"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const date = new Date();
   const currentYear = date.getFullYear();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -19,18 +21,31 @@ const App = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+    const handlePageLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    };
+
+    window.addEventListener("load", handlePageLoad);
+
+    return () => window.removeEventListener("load", handlePageLoad);
   }, []);
+
   return (
-    <div>
+    <div className="bg-black overflow-hidden w-screen text-white relative">
       {isLoading ? (
         <div className={`flex justify-center h-screen items-center bg-black`}>
           <GridLoader color={`white`} />
         </div>
       ) : (
-        <div className="bg-black overflow-hidden w-screen text-white">
+        <Suspense
+          fallback={
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-80 z-50">
+              <GridLoader color={`white`} />
+            </div>
+          }
+        >
           <Navbar />
           <div>
             <section>
@@ -56,9 +71,10 @@ const App = () => {
             </button>
             <h1>&copy; {currentYear} Nugar.dev. All rights reserved.</h1>
           </footer>
-        </div>
+        </Suspense>
       )}
     </div>
   );
 };
+
 export default App;
