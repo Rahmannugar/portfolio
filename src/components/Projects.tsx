@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Projects = () => {
-  // Separate hover states for each project
   const [hoveredProject, setHoveredProject] = useState<null | Number>(null);
 
   const projects = [

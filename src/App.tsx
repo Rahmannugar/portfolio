@@ -1,9 +1,9 @@
 import "./App.css";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
+import Contact from "./sections/Contact";
+import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
-import Services from "./components/Services";
-import Works from "./components/Works";
+import Services from "./sections/Services";
+import Works from "./sections/Works";
 const App = () => {
   return (
     <div className="bg-black overflow-hidden w-screen text-white">
