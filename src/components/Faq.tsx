@@ -69,7 +69,7 @@ const Faq = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.9, ease: "easeIn" }}
               onClick={() => handleToggle(index)}
-              className="cursor-pointer flex items-center justify-between px-5 h-16"
+              className="cursor-pointer flex items-center space-x-3 justify-between px-5 h-16"
             >
               <h1>{faq.question}</h1>
               <div className={`relative`}>
