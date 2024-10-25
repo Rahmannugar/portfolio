@@ -12,6 +12,10 @@ const Works = () => {
           backgroundColor: "white",
           color: "black",
         }}
+        whileTap={{
+          backgroundColor: "white",
+          color: "black",
+        }}
         className="text-3xl cursor-pointer 2xl:text-5xl text-gray-300 hover:px-3 font-bold"
       >
         WORK <span className="text-blue-200">EXPERIENCE</span>
@@ -32,6 +36,7 @@ const Works = () => {
             <h2>June 2022 - September 2023</h2>
             <motion.img
               whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 1.3 }}
               src="https://res.cloudinary.com/thirtythree/image/upload/v1729702409/bloom-work_nn5ekx.jpg"
               alt="bloom-media"
               className="w-[73px] h-[73px] object-cover mx-auto"
@@ -65,6 +70,7 @@ const Works = () => {
 
             <motion.div
               whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 1.3 }}
               className="w-[73px] bg-blue-900 flex justify-center items-center h-[73px] mx-auto object-cover"
             >
               <h1 className="text-xs">RapidSwap</h1>
@@ -97,6 +103,7 @@ const Works = () => {
             <h2>July 2023 - November 2023</h2>
             <motion.img
               whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 1.3 }}
               src="https://res.cloudinary.com/thirtythree/image/upload/v1729702434/lagos-ministry-work_kc1ous.jpg"
               alt="bloom-media"
               className="w-[73px] h-[73px] mx-auto object-cover"

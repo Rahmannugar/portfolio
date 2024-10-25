@@ -12,6 +12,10 @@ const Experience = () => {
             backgroundColor: "white",
             color: "black",
           }}
+          whileTap={{
+            backgroundColor: "white",
+            color: "black",
+          }}
           className="text-3xl cursor-pointer 2xl:text-5xl hover:px-3 text-blue-200 font-bold"
         >
           MY SERVICES
@@ -42,6 +46,11 @@ const Experience = () => {
               backgroundColor: "white",
               color: "black",
             }}
+            whileTap={{
+              scale: 0.8,
+              backgroundColor: "white",
+              color: "black",
+            }}
             className="bg-blue-900 p-3 font-bold rounded-md mt-5"
           >
             Contact Me
@@ -55,6 +64,11 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
+            scale: 0.8,
+            backgroundColor: "white",
+            color: "black",
+          }}
+          whileTap={{
             scale: 0.8,
             backgroundColor: "white",
             color: "black",
@@ -73,6 +87,11 @@ const Experience = () => {
             backgroundColor: "white",
             color: "black",
           }}
+          whileTap={{
+            scale: 0.8,
+            backgroundColor: "white",
+            color: "black",
+          }}
           className="bg-blue-900 py-3 px-5 2xl:text-xl rounded-2xl cursor-pointer"
         >
           <h1>Web Design</h1>
@@ -83,6 +102,11 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
+            scale: 0.8,
+            backgroundColor: "white",
+            color: "black",
+          }}
+          whileTap={{
             scale: 0.8,
             backgroundColor: "white",
             color: "black",

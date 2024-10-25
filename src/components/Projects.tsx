@@ -78,6 +78,10 @@ const Projects = () => {
           backgroundColor: "white",
           color: "black",
         }}
+        whileTap={{
+          backgroundColor: "white",
+          color: "black",
+        }}
         className="text-3xl cursor-pointer 2xl:text-5xl text-gray-300 hover:px-3 font-bold"
       >
         PRO<span className="text-blue-200">JECTS</span>
@@ -123,6 +127,7 @@ const Projects = () => {
                   <motion.h1
                     key={i}
                     whileHover={{ backgroundColor: "white", color: " black" }}
+                    whileTap={{ backgroundColor: "white", color: " black" }}
                     className="bg-black h-full w-full max-w-[100px] py-2 text-nowrap cursor-pointer rounded-sm text-center font-bold"
                   >
                     {tech}
@@ -142,6 +147,11 @@ const Projects = () => {
             >
               <motion.button
                 whileHover={{
+                  scale: 0.8,
+                  backgroundColor: "white",
+                  color: "black",
+                }}
+                whileTap={{
                   scale: 0.8,
                   backgroundColor: "white",
                   color: "black",

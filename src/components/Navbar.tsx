@@ -66,6 +66,11 @@ const Navbar = () => {
             color: " #bfdbfe",
             rotate: 180,
           }}
+          whileTap={{
+            scale: 1.2,
+            color: " #bfdbfe",
+            rotate: 180,
+          }}
           className="text-2xl 2xl:text-4xl font-bold"
         >
           Nugar.dev
@@ -75,6 +80,7 @@ const Navbar = () => {
           className="md:hidden z-50"
           onClick={() => setOpen((prev) => !prev)}
           whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 1.5 }}
         >
           <motion.div
             key={open ? "closeIcon" : "menuIcon"}
@@ -100,6 +106,7 @@ const Navbar = () => {
                 className="md:hidden z-60 absolute top-10 right-10"
                 onClick={() => setOpen((prev) => !prev)}
                 whileHover={{ scale: 1.5 }}
+                whileTap={{ scale: 1.5 }}
               >
                 <motion.div
                   key={open ? "closeIcon" : "menuIcon"}
@@ -131,24 +138,31 @@ const Navbar = () => {
 
         {/* desktop menu */}
         <motion.div className="md:flex space-x-10 text-lg 2xl:text-2xl hidden">
-          <motion.a href="/" whileHover={{ scale: 1.2, color: " #bfdbfe" }}>
+          <motion.a
+            href="/"
+            whileHover={{ scale: 1.2, color: " #bfdbfe" }}
+            whileTap={{ scale: 1.2, color: " #bfdbfe" }}
+          >
             Home
           </motion.a>
           <motion.a
             href="#Services"
             whileHover={{ scale: 1.2, color: " #bfdbfe" }}
+            whileTap={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Services
           </motion.a>
           <motion.a
             href="#Works"
             whileHover={{ scale: 1.2, color: " #bfdbfe" }}
+            whileTap={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Works
           </motion.a>
           <motion.a
             href="#Contact"
             whileHover={{ scale: 1.2, color: " #bfdbfe" }}
+            whileTap={{ scale: 1.2, color: " #bfdbfe" }}
           >
             Contact
           </motion.a>

@@ -96,6 +96,7 @@ const Services = () => {
                   alt={tech.alt}
                   src={tech.src}
                   whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 1.3 }}
                   className="absolute w-10 h-10"
                   style={{
                     left: `${x}px`,

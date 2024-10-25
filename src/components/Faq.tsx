@@ -41,6 +41,10 @@ const Faq = () => {
           backgroundColor: "white",
           color: "black",
         }}
+        whileTap={{
+          backgroundColor: "white",
+          color: "black",
+        }}
         className="text-3xl cursor-pointer 2xl:text-5xl text-gray-300 hover:px-3 font-bold"
       >
         FREQUENTLY ASKED <span className="text-blue-200">QUESTIONS</span>
