@@ -69,7 +69,7 @@ const Hero = () => {
               <GitHubIcon />
             </motion.a>
             <motion.a
-              href="/files/student-handbook.pdf"
+              href="/files/Resume.pdf"
               download
               whileHover={{ scale: 0.8 }}
               className="bg-white hover:bg-[#bfdbfe] text-black font-bold flex items-center py-2 px-3 space-x-2 rounded-[100px]"
