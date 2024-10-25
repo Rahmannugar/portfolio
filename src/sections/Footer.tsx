@@ -38,13 +38,19 @@ const Footer = () => {
               <div>
                 <FooterTitle title="Follow us" className="text-white" />
                 <FooterLinkGroup col>
-                  <FooterLink href="#" target="_blank" className="text-white">
-                    <a href="https://www.github.com/Rahmannugar">Github</a>
+                  <FooterLink
+                    href="https://www.github.com/Rahmannugar"
+                    target="_blank"
+                    className="text-white"
+                  >
+                    Github
                   </FooterLink>
-                  <FooterLink href="#" target="_blank" className="text-white">
-                    <a href="ttps://www.linkedin.com/in/Rahmannugar">
-                      LinkedIn
-                    </a>
+                  <FooterLink
+                    href="https://www.linkedin.com/in/Rahmannugar"
+                    target="_blank"
+                    className="text-white"
+                  >
+                    LinkedIn
                   </FooterLink>
                 </FooterLinkGroup>
               </div>
