@@ -123,7 +123,7 @@ const Projects = () => {
                   <motion.h1
                     key={i}
                     whileHover={{ backgroundColor: "white", color: " black" }}
-                    className="bg-black h-full py-2 text-nowrap cursor-pointer rounded-sm text-center font-bold"
+                    className="bg-black h-full w-full max-w-[100px] py-2 text-nowrap cursor-pointer rounded-sm text-center font-bold"
                   >
                     {tech}
                   </motion.h1>
