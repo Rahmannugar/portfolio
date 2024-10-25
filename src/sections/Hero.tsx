@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-  const spring = {
-    type: "spring",
-    stiffness: 300,
-    damping: 15,
-  };
-
   return (
     <div className="lg:h-screen md:flex mt-16 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 lg:px-16 space-y-20 md:space-y-0">
       <div className="space-y-7">
@@ -56,6 +50,7 @@ const Hero = () => {
           >
             <motion.a
               whileHover={{ scale: 1.5 }}
+              whileTap={{ scale: 1.5 }}
               href="https://www.linkedin.com/in/Rahmannugar"
               target="_blank"
             >
@@ -63,6 +58,7 @@ const Hero = () => {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.5 }}
+              whileTap={{ scale: 1.5 }}
               href="https://www.github.com/Rahmannugar"
               target="_blank"
             >
@@ -72,6 +68,7 @@ const Hero = () => {
               href="/files/Resume.pdf"
               download
               whileHover={{ scale: 0.8 }}
+              whileTap={{ scale: 0.8 }}
               className="bg-white hover:bg-[#bfdbfe] text-black font-bold flex items-center py-2 px-3 space-x-2 rounded-[100px]"
             >
               <svg
@@ -91,14 +88,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        whileHover={{
-          scale: 0.8,
-          transition: spring,
-        }}
-        className="flex justify-center items-center"
-      ></motion.div>
     </div>
   );
 };

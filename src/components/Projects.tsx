@@ -96,6 +96,8 @@ const Projects = () => {
             transition={{ duration: 0.65, ease: "easeIn" }}
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
+            onTouchStart={() => setHoveredProject(index)}
+            onTouchEnd={() => setHoveredProject(null)}
             className="relative overflow-hidden max-w-[767px] rounded-xl px-5 bg-gray-700 py-5 h-full flex flex-col justify-between space-y-3"
           >
             {/* Glass-like hover effect */}
