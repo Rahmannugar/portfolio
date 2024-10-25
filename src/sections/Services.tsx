@@ -44,7 +44,7 @@ const Services = () => {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center px-10 mt-[120px]">
+    <div className=" flex flex-col justify-center items-center px-10 lg:px-16 mt-[50px]">
       <motion.div
         className="relative w-80 h-80 rounded-full border-dotted border-4 border-gray-300 flex justify-center items-center"
         initial={{ opacity: 0, scale: 0.6 }}
@@ -81,7 +81,6 @@ const Services = () => {
               </clipPath>
             </defs>
           </svg>
-          
         </h2>
         <motion.div
           className="absolute w-[90%] h-full"

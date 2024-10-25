@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="lg:h-screen md:flex mt-16 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 space-y-20 md:space-y-0">
+    <div className="lg:h-screen md:flex mt-16 lg:mt-[-50px] justify-between 2xl:justify-center 2xl:space-x-48 items-center rounded-[40px] px-10 lg:px-16 space-y-20 md:space-y-0">
       <div className="space-y-7">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -98,21 +98,7 @@ const Hero = () => {
           transition: spring,
         }}
         className="flex justify-center items-center"
-      >
-        <motion.img
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            ...spring,
-            duration: 1.2,
-            ease: "easeIn",
-            delay: 0.6,
-          }}
-          src="https://res.cloudinary.com/thirtythree/image/upload/v1729702513/nugar-dev_mgid4s.jpg"
-          className="rounded-full h-[300px] w-[300px] 2xl:h-[400px] 2xl:w-[400px] border-4 border-[#bfdbfe] cursor-pointer object-cover"
-        ></motion.img>
-      </motion.div>
+      ></motion.div>
     </div>
   );
 };

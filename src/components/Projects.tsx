@@ -92,7 +92,7 @@ const Projects = () => {
             transition={{ duration: 0.65, ease: "easeIn" }}
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
-            className="relative overflow-hidden max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-full flex flex-col justify-between space-y-3"
+            className="relative overflow-hidden max-w-[767px] rounded-xl px-5 bg-gray-700 py-5 h-full flex flex-col justify-between space-y-3"
           >
             {/* Glass-like hover effect */}
             <motion.div
@@ -123,7 +123,7 @@ const Projects = () => {
                   <motion.h1
                     key={i}
                     whileHover={{ backgroundColor: "white", color: " black" }}
-                    className="bg-black px-3 py-2 cursor-pointer rounded-md text-center font-bold"
+                    className="bg-black px-3 py-2 cursor-pointer rounded-xl text-center font-bold"
                   >
                     {tech}
                   </motion.h1>
@@ -146,7 +146,7 @@ const Projects = () => {
                   backgroundColor: "white",
                   color: "black",
                 }}
-                className="bg-black px-5 py-2 font-bold rounded-md mt-5"
+                className="bg-black px-5 py-2 font-bold rounded-xl mt-5"
               >
                 View
               </motion.button>
