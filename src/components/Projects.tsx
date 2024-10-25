@@ -73,7 +73,7 @@ const Projects = () => {
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeIn" }}
+        transition={{ duration: 0.7, ease: "easeIn" }}
         whileHover={{
           backgroundColor: "white",
           color: "black",
@@ -89,7 +89,7 @@ const Projects = () => {
             key={index}
             initial={{ opacity: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeIn" }}
+            transition={{ duration: 0.65, ease: "easeIn" }}
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
             className="relative overflow-hidden max-w-[767px] rounded-md px-5 bg-gray-700 py-5 h-full flex flex-col justify-between space-y-3"

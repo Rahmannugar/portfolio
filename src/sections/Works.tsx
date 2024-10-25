@@ -7,7 +7,7 @@ const Works = () => {
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeIn" }}
+        transition={{ duration: 0.75, ease: "easeIn" }}
         whileHover={{
           backgroundColor: "white",
           color: "black",
@@ -22,7 +22,7 @@ const Works = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
+          transition={{ duration: 0.65, ease: "easeIn" }}
           className="max-w-[767px] rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
@@ -54,7 +54,7 @@ const Works = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
+          transition={{ duration: 0.65, ease: "easeIn" }}
           className="max-w-[767px] cursor-pointer rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
@@ -87,7 +87,7 @@ const Works = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
+          transition={{ duration: 0.65, ease: "easeIn" }}
           className="max-w-[767px] rounded-md px-5 h-[500px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">

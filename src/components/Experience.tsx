@@ -7,7 +7,7 @@ const Experience = () => {
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
             backgroundColor: "white",
             color: "black",
@@ -19,7 +19,7 @@ const Experience = () => {
         <motion.p
           initial={{ opacity: 0, x: -250 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           className="text-justify text-sm 2xl:text-lg hover:text-[#bfdbfe] cursor-pointer"
         >
           As a web development professional with three years of practical
@@ -33,7 +33,7 @@ const Experience = () => {
         <motion.a
           initial={{ scale: 0.5, y: -300 }}
           whileInView={{ scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           href="#Contact"
         >
           <motion.button
@@ -53,7 +53,7 @@ const Experience = () => {
         <motion.div
           initial={{ opacity: 0, x: 250 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
             scale: 0.8,
             backgroundColor: "white",
@@ -67,7 +67,7 @@ const Experience = () => {
         <motion.div
           initial={{ opacity: 0, x: 250 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
             scale: 0.8,
             backgroundColor: "white",
@@ -81,7 +81,7 @@ const Experience = () => {
         <motion.div
           initial={{ opacity: 0, x: 250 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           whileHover={{
             scale: 0.8,
             backgroundColor: "white",

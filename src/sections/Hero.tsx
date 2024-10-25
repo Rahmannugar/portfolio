@@ -15,8 +15,9 @@ const Hero = () => {
       <div className="space-y-7">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.3, ease: "easeIn", delay: 0.3 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.78, ease: "easeIn" }}
         >
           <h1 className="text-3xl lg:text-5xl font-bold">
             Hello, I'm
@@ -36,19 +37,21 @@ const Hero = () => {
         <div className="space-y-4">
           <motion.p
             initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeIn", delay: 0.6 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.78, ease: "easeIn" }}
             className="text-justify lg:text-xl w-full md:max-w-[45vw] lg:max-w-[700px] hover:text-[#bfdbfe] cursor-pointer"
           >
-            Computer Science graduate and a dynamic web development specialist with three years of hands-on
-            experience in crafting scalable solutions. Proﬁcient in front-end
-            and back-end technologies. Collaborative and innovative problem
-            solver.
+            Computer Science graduate and a dynamic web development specialist
+            with three years of hands-on experience in crafting scalable
+            solutions. Proﬁcient in front-end and back-end technologies.
+            Collaborative and innovative problem solver.
           </motion.p>
           <motion.div
             initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeIn", delay: 0.9 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.78, ease: "easeIn" }}
             className="flex items-center space-x-3"
           >
             <motion.a
@@ -98,12 +101,13 @@ const Hero = () => {
       >
         <motion.img
           initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{
             ...spring,
             duration: 1.2,
             ease: "easeIn",
-            delay: 1.2,
+            delay: 0.6,
           }}
           src="https://res.cloudinary.com/thirtythree/image/upload/v1729702513/nugar-dev_mgid4s.jpg"
           className="rounded-full h-[300px] w-[300px] 2xl:h-[400px] 2xl:w-[400px] border-4 border-[#bfdbfe] cursor-pointer object-cover"

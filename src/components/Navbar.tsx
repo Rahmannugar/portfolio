@@ -52,11 +52,12 @@ const Navbar = () => {
           opacity: 0,
           y: -50,
         }}
-        animate={{
+        whileInView={{
           opacity: 1,
           y: 0,
         }}
-        transition={{ ease: "easeIn", duration: 1, delay: 0.3 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeIn", duration: 0.7 }}
       >
         <motion.a
           href="/"

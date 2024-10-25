@@ -74,7 +74,7 @@ const Contact = () => {
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeIn" }}
+        transition={{ duration: 0.7, ease: "easeIn" }}
         whileHover={{
           backgroundColor: "white",
           color: "black",
@@ -111,7 +111,7 @@ const Contact = () => {
             x: 0,
             opacity: 1,
           }}
-          transition={{ duration: 0.8, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           onSubmit={sendMessage}
         >
           <input

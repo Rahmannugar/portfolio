@@ -36,7 +36,7 @@ const Faq = () => {
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeIn" }}
+        transition={{ duration: 0.75, ease: "easeIn" }}
         whileHover={{
           backgroundColor: "white",
           color: "black",
@@ -67,7 +67,7 @@ const Faq = () => {
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.9, ease: "easeIn" }}
+              transition={{ duration: 0.75, ease: "easeIn" }}
               onClick={() => handleToggle(index)}
               className="cursor-pointer flex items-center space-x-3 justify-between px-5 h-16"
             >

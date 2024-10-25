@@ -49,13 +49,13 @@ const Services = () => {
         className="relative w-80 h-80 rounded-full border-dotted border-4 border-gray-300 flex justify-center items-center"
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeIn" }}
+        transition={{ duration: 0.75, ease: "easeIn" }}
         viewport={{ once: true }}
       >
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeIn" }}
+          transition={{ duration: 0.75, ease: "easeIn" }}
           viewport={{ once: true }}
           className="absolute top-[-100px] text-2xl text-gray-300 font-bold"
         >
@@ -81,7 +81,7 @@ const Services = () => {
               </clipPath>
             </defs>
           </svg>
-          If it runs on code, I’m all in!
+          
         </h2>
         <motion.div
           className="absolute w-[90%] h-full"
