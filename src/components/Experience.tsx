@@ -16,7 +16,7 @@ const Experience = () => {
             backgroundColor: "white",
             color: "black",
           }}
-          className="text-3xl cursor-pointer 2xl:text-5xl hover:px-3 text-blue-200 font-bold"
+          className="text-3xl cursor-pointer 2xl:text-4xl hover:px-3 text-blue-200 font-bold"
         >
           MY SERVICES
         </motion.h1>

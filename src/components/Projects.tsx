@@ -82,7 +82,7 @@ const Projects = () => {
           backgroundColor: "white",
           color: "black",
         }}
-        className="text-3xl cursor-pointer 2xl:text-5xl text-gray-300 hover:px-3 font-bold"
+        className="text-3xl cursor-pointer 2xl:text-4xl text-gray-300 hover:px-3 font-bold"
       >
         PRO<span className="text-blue-200">JECTS</span>
       </motion.h1>
@@ -124,7 +124,7 @@ const Projects = () => {
                 }}
                 className="w-full h-[200px] cursor-pointer mx-auto"
               ></div>
-              <div className="gap-2 grid grid-cols-2 md:grid-cols-3n text-xs mb-5">
+              <div className="gap-2 lg:gap-3 grid grid-cols-2 md:grid-cols-3 2xl:py-5 text-xs mb-5">
                 {project.techStack.map((tech, i) => (
                   <motion.h1
                     key={i}
