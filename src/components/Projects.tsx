@@ -124,7 +124,7 @@ const Projects = () => {
                 }}
                 className="w-full h-[200px] cursor-pointer mx-auto"
               ></div>
-              <div className="flex flex-wrap it text-xs mb-5">
+              <div className="flex flex-wrap gap-3 text-xs mb-5">
                 {project.techStack.map((tech, i) => (
                   <motion.h1
                     key={i}
