@@ -5,35 +5,47 @@ const Services = () => {
   const technologies = [
     {
       alt: "HTML5",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682347/html_ffltyh.png",
     },
     {
       alt: "CSS3",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682347/css_weuoc7.png",
     },
     {
       alt: "JavaScript",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682347/javascript_dg4rqs.png",
     },
     {
       alt: "TypeScript",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682347/typescript_nnxwnx.png",
     },
     {
       alt: "React",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682346/react_gqzxeq.png",
+    },
+    {
+      alt: "Next.js",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682345/nextjs_rn4obe.png",
     },
     {
       alt: "Node.js",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682346/nodejs_r0s4fp.png",
+    },
+    {
+      alt: "Express.js",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682346/express_yqjbmb.png",
     },
     {
       alt: "MongoDB",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682345/mongodb_up658u.png",
+    },
+    {
+      alt: "PostgreSQL",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682346/postgresql_zauul1.png",
     },
     {
       alt: "GIT",
-      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png",
+      src: "https://res.cloudinary.com/thirtythree/image/upload/v1730682345/git_mlxkrr.png",
     },
   ];
   const getPosition = (index: number, total: number, radius: number) => {
@@ -44,7 +56,7 @@ const Services = () => {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center px-10 lg:px-16 mt-[100px]">
+    <div className="flex flex-col justify-center items-center px-10 lg:px-16 mt-[100px]">
       <motion.div
         className="relative w-80 h-80 rounded-full border-dotted border-4 border-gray-300 flex justify-center items-center"
         initial={{ opacity: 0, scale: 0.6 }}
@@ -83,7 +95,7 @@ const Services = () => {
           </svg>
         </h2>
         <motion.div
-          className="absolute w-[90%] h-full"
+          className="absolute w-[100%] h-full"
           animate={{ rotate: 360 }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         >
