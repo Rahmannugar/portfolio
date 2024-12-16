@@ -36,8 +36,8 @@ const Hero = () => {
             transition={{ duration: 0.78, ease: "easeIn" }}
             className="text-justify lg:text-xl w-full md:max-w-[45vw] lg:max-w-[700px] hover:text-[#bfdbfe] cursor-pointer"
           >
-            Computer Science graduate and a dynamic web development specialist
-            with three years of hands-on experience in crafting scalable
+            Dynamic web development specialist
+            with four years of hands-on experience in crafting scalable
             solutions. Proﬁcient in front-end and back-end technologies.
             Collaborative and innovative problem solver.
           </motion.p>

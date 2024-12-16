@@ -26,7 +26,7 @@ const Experience = () => {
           transition={{ duration: 0.75, ease: "easeIn" }}
           className="text-justify text-sm 2xl:text-lg hover:text-[#bfdbfe] cursor-pointer"
         >
-          As a web development professional with three years of practical
+          As a web development professional with four years of practical
           experience, I specialize in creating efficient, scalable websites and
           applications. From user-friendly front-end designs to robust back-end
           architecture, I deliver customized solutions that adapt to client

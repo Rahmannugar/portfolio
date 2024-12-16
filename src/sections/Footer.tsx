@@ -72,7 +72,7 @@ const Footer = () => {
           <div className="w-full sm:flex sm:items-center sm:justify-center">
             <FooterCopyright
               href="#"
-              by="Nugar.dev™"
+              by="Nugar.dev"
               year={currentYear}
               className="text-white"
             />

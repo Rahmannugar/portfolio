@@ -45,12 +45,12 @@ const Works = () => {
           <div className="space-y-2">
             <h2 className="text-blue-200">Description</h2>
             <p className="text-justify text-sm">
-              During my role at Bloom Digital Media as a frontend developer, I
-              played a pivotal role in constructing and managing the company's
-              platform digital media services. My responsibilities included
-              designing and implementing key features with a keen eye on SEO
-              optimization, ensuring our offerings achieved a prominent and
-              discoverable online presence.
+              As a frontend developer at Bloom Digital Media, I played a pivotal
+              role in constructing and managing the company's platform digital
+              media services. My responsibilities included designing and
+              implementing key features with a keen eye on SEO optimization,
+              ensuring our offerings achieved a prominent and discoverable
+              online presence.
             </p>
           </div>
         </motion.div>
@@ -63,9 +63,7 @@ const Works = () => {
           className="max-w-[767px] cursor-pointer rounded-xl px-5 h-[550px] bg-gray-700 py-7 flex flex-col items-center space-y-7"
         >
           <div className="space-y-3 text-center">
-            <h1 className="text-xl font-bold text-blue-200">
-              FULLSTACK WEB DEVELOPER
-            </h1>
+            <h1 className="text-xl font-bold text-blue-200">WEB DEVELOPER</h1>
             <h2>October 2022 - June 2023</h2>
 
             <motion.div
@@ -79,12 +77,12 @@ const Works = () => {
           <div className="space-y-2">
             <h2 className="text-blue-200">Description</h2>
             <p className="text-justify text-sm">
-              As a remote web developer at RapidSwap, my responsibilities
-              included designing and developing both frontend and backend
-              components for cryptocurrency-related applications. I implemented
-              features, ensured system functionality, and collaborated with
-              cross-functional teams to enhance the overall performance of
-              web-based tools in the crypto domain.
+              My responsibilities at RapidSwap included designing and developing
+              both frontend and backend components for cryptocurrency-related
+              applications. I implemented features, ensured system
+              functionality, and collaborated with cross-functional teams to
+              enhance the overall performance of web-based tools in the crypto
+              domain.
             </p>
           </div>
         </motion.div>
@@ -112,12 +110,12 @@ const Works = () => {
           <div className="space-y-2">
             <h2 className="text-blue-200">Description</h2>
             <p className="text-justify text-sm">
-              As a software engineering intern at the Ministry of Science and
-              Technology, Lagos State, my responsibilities included assisting in
-              the development and maintenance of software solutions,
-              participating in coding and debugging activities, and
-              collaborating with the team to contribute to technological
-              advancements in support of the ministry's initiatives.
+              During my time at the Ministry of Science and Technology, Lagos
+              State, my responsibilities included assisting in the development
+              and maintenance of software solutions, participating in coding and
+              debugging activities, and collaborating with the team to
+              contribute to technological advancements in support of the
+              ministry's initiatives.
             </p>
           </div>
         </motion.div>

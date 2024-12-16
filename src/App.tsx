@@ -2,6 +2,7 @@ import "./App.css";
 import GridLoader from "react-spinners/GridLoader";
 import { useEffect, useState, Suspense, lazy } from "react";
 import Footer from "./sections/Footer";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const Contact = lazy(() => import("./sections/Contact"));
 const Hero = lazy(() => import("./sections/Hero"));
@@ -59,9 +60,9 @@ const App = () => {
             <Footer />
             <button
               onClick={scrollToTop}
-              className="py-2 px-3 bg-white text-black rounded"
+              className="py-2 px-2 rounded-full bg-white text-black"
             >
-              Back to top
+              <ArrowDropUpIcon />
             </button>
           </footer>
         </Suspense>

@@ -113,7 +113,7 @@ const Services = () => {
                   style={{
                     left: `${x}px`,
                     top: `${y}px`,
-                    transform: "translate(-50%, -10%)",
+                    transform: "translate(-10%, -10%)",
                   }}
                 />
               );
