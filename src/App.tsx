@@ -29,7 +29,9 @@ const App = () => {
   return (
     <div className="bg-black overflow-hidden w-screen text-white relative">
       {isLoading ? (
-        <div className={`flex justify-center h-screen items-center bg-black`}>
+        <div
+          className={`flex justify-center flex-grow h-screen items-center bg-black`}
+        >
           <GridLoader color={`white`} />
         </div>
       ) : (
